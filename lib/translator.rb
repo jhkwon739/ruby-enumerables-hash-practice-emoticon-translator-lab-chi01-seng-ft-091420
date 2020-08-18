@@ -23,7 +23,7 @@ def get_japanese_emoticon(yaml_file, english_emoticon)
     end
   end
   #binding.pry
-  japanese == "" ? sorry_message : japanese_emoticon
+  japanese_emoticon == "" ? sorry_message : japanese_emoticon
   #name_of_emoticon
 
 end

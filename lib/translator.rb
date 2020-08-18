@@ -18,12 +18,12 @@ def get_japanese_emoticon(yaml_file, english_emoticon)
   library = load_library(yaml_file)
   library.find do |key, value|
     #binding.pry
-    if library[key][:english] == english
+    if library[key][:english] == english_emoticon
       japanese_emoticon = library[key][:japanse]
     end
   end
   #binding.pry
-  name_of_emoticon == "" ? sorry_message : japanese_emoticon
+  japanese == "" ? sorry_message : japanese_emoticon
   #name_of_emoticon
 
 end

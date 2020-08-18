@@ -17,15 +17,11 @@ def get_japanese_emoticon(yaml_file, english_emoticon)
   sorry_message = "Sorry, that emoticon was not found"
   library = load_library(yaml_file)
   library.find do |key, value|
-    #binding.pry
     if library[key][:english] == english_emoticon
       japanese_emoticon = library[key][:japanese]
     end
   end
-  #binding.pry
   japanese_emoticon == "" ? sorry_message : japanese_emoticon
-  #name_of_emoticon
-
 end
 
 def get_english_meaning(yaml_file, japanese_emoticon)
@@ -34,12 +30,9 @@ def get_english_meaning(yaml_file, japanese_emoticon)
   sorry_message = "Sorry, that emoticon was not found"
   library = load_library(yaml_file)
   library.find do |key, value|
-    #binding.pry
     if library[key][:japanese] == japanese_emoticon
       name_of_emoticon = key
     end
   end
-  #binding.pry
   name_of_emoticon == "" ? sorry_message : name_of_emoticon 
-  #name_of_emoticon
 end

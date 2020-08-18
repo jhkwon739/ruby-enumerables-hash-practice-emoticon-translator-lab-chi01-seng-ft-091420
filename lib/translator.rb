@@ -11,8 +11,20 @@ def load_library(yaml_file)
   library
 end
 
-def get_japanese_emoticon(yaml_file, emoticon)
+def get_japanese_emoticon(yaml_file, english_emoticon)
   # code goes here
+  japanese_emoticon = ""
+  #sorry_message = "Sorry, that emoticon was not found"
+  library = load_library(yaml_file)
+  library.find do |key, value|
+    #binding.pry
+    if library[key][:english] == english
+      japanese_emoticon = library[key][:japanse]
+    end
+  end
+  #binding.pry
+  name_of_emoticon == "" ? sorry_message : japanese_emoticon
+  #name_of_emoticon
 
 end
 

@@ -19,7 +19,7 @@ def get_japanese_emoticon(yaml_file, english_emoticon)
   library.find do |key, value|
     #binding.pry
     if library[key][:english] == english_emoticon
-      japanese_emoticon = library[key][:japanse]
+      japanese_emoticon = library[key][:japanese]
     end
   end
   #binding.pry

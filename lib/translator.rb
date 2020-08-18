@@ -36,7 +36,6 @@ def get_english_meaning(yaml_file, japanese_emoticon)
   library.find do |key, value|
     #binding.pry
     if library[key][:japanese] == japanese_emoticon
-      binding.pry
       name_of_emoticon = key
     end
   end
